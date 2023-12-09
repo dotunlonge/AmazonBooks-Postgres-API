@@ -7,13 +7,15 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "fshdleednryvza",
-    "password": "dcb292055f9033f4610ff7aae1a9a6334727f07527af8ca887a9ec565ca8c424",
-    "database": "d3no3sqvo7ji46",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "port": 5432
-  },
+      "use_env_variable": "DATABASE_URL",
+      "dialect": "postgres",
+      "dialectOptions": {
+        "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+        }
+      }
+    },
   "local": {
     "username": "dotunlonge",
     "password": "password",
