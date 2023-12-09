@@ -11,7 +11,8 @@
     "password": "dcb292055f9033f4610ff7aae1a9a6334727f07527af8ca887a9ec565ca8c424",
     "database": "d3no3sqvo7ji46",
     "host": "ec2-3-210-173-88.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "port": 5432
   },
   "local": {
     "username": "dotunlonge",
