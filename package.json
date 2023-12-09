@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "createDB": "npx sequelize-cli db:migrate",
     "seedDB": "npm run createDB && npx sequelize db:seed --seed demo-books.js",
-    "start": "npm run createDB && concurrently \"npx tsc --watch\" \"nodemon dist/index.js\""
+    "start": "npm run seedDB && npm run createDB && concurrently \"npx tsc --watch\" \"nodemon dist/index.js\""
   },
   "keywords": [],
   "author": "",
@@ -25,19 +25,19 @@
     "pg": "^8.11.3",
     "pg-pool": "^3.6.1",
     "sequelize": "^6.35.1",
-    "typescript": "^5.3.3"
-  },
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
-    "@types/body-parser": "^1.19.5",
-    "@types/express": "^4.17.21",
-    "@types/pg": "^8.10.9",
-    "@types/pg-pool": "^2.0.6",
+    "typescript": "^5.3.3",
     "concurrently": "^8.2.2",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.2",
     "npx": "^10.2.2",
     "ts-node": "^10.9.1",
     "sequelize-cli": "^6.6.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.10.9",
+    "@types/pg-pool": "^2.0.6"
   }
 }
